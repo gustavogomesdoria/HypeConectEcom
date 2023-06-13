@@ -1,0 +1,99 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common =true) {
+    .account.customer-address-form {
+        .form-address-edit {
+            display: flex;
+            flex-direction: column;
+
+            fieldset {
+                .box-bordered();
+                padding: 25px;
+                width: 70%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 20px;
+
+                .field {
+                    width: 49%;
+
+                    &.country,
+                    &.taxvat {
+                        display: none !important;
+                    }
+                }
+
+                .field.choice {
+                    width: 100%;
+                }
+
+                // .field.number {
+
+                //     input[type="checkbox"]:checked:after,
+                //     .checkbox:checked:after {
+                //         margin: -7px 0 0 1px;
+                //     }
+                // }
+
+                .field.zip {
+                    label {
+                        width: 100%;
+
+                        a {
+                            float: right;
+                            font-size: 13px;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .group-fields {
+                    width: 100%;
+
+                    .field {
+                        width: inherit;
+                    }
+
+                    .field.choice.set.billing {
+                        margin-bottom: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+@media only screen and (max-width: @screen__m) {
+    .account.customer-address-form {
+        .form-address-edit {
+            fieldset {
+                width: 100%; 
+                .field {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+//
+//  Style for 'tablet' devices
+//  ---------------------------------------------
+
+
+@media only screen and (min-width: @screen__m) and (max-width: @screen__l) {
+    .account.customer-address-form {
+        .form-address-edit {
+            fieldset {
+                width: 100%;                                                                                                    
+            }
+        }
+    }
+}

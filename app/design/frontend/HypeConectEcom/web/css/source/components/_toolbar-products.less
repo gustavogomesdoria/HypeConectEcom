@@ -1,0 +1,62 @@
+//TOOLBAR
+//MODOS DE EXIBIÇÃO DE PRODUTO - LISTA E GRID
+
+.toolbar.toolbar-products {
+
+    .toolbar-amount{
+        display: none;
+    }
+
+    .modes {
+        .modes-mode.active {
+            background: @primary__color;
+
+            &:before {
+                color: @white__color;
+            }
+        }
+
+        .modes-mode {
+            background: @gray__color__6;
+            box-shadow: none;
+            border: none;
+
+            &:before {
+                color: @primary__color;
+            }
+        }
+
+        .mode-grid {
+            &:before {
+                content: "\e979";
+            }
+        }
+
+        .mode-list {
+            &:before {
+                content: "\e98d";
+            }
+        }
+    }
+
+    .toolbar-sorter.sorter {
+
+        .sorter-action {
+            color: @primary__color;
+            display: none;
+        }
+
+        .sort-desc {
+            &:before {
+                content: "\e90c";
+            }
+        }
+
+        .sort-asc {
+            &:before {
+                content: "\e914";
+            }
+        }
+    }
+
+}

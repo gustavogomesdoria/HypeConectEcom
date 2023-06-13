@@ -1,0 +1,45 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common = true) {
+    .account.review-customer-index{
+
+        .data.table.table-reviews{
+            tbody{
+
+                td{
+                    vertical-align: middle;
+                }
+
+                .col.item{
+                    strong.product-name a{
+                        .text-lines(1);
+                        text-decoration: underline;
+                        color: @gray__color__1;
+                        font-size: 15px;
+                    }
+                }
+                .col.description span{
+                    .text-lines(1);
+                }
+                .col.actions{
+                    a.action{
+                        text-decoration: underline;
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+@media only screen and (max-width: @screen__m) {
+    .account.review-customer-index{
+
+    }
+}

@@ -1,0 +1,114 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common =true) {
+    .catalog-product-view {
+
+        //DESCIPTION CONTENT
+        .product.info.detailed {
+            padding-top: 20px;
+
+            .product.data.items {
+
+
+                .additional-attributes-wrapper {
+                    table.table.additional-attributes {
+                        tbody {
+                            border: none;
+
+                            tr {
+                                border: none;
+
+                                th,
+                                td {
+                                    padding: 0 !important;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                }
+
+                                th {
+                                    color: @gray__color__1 ;
+
+                                    &:after {
+                                        content: ":";
+                                        padding-right: 7px;
+                                    }
+
+                                    &:before {
+                                        content: "•";
+                                        padding-right: 10px;
+                                    }
+                                }
+
+                                td {
+                                    color: @gray__color__3 ;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+
+    }
+}
+
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+@media only screen and (max-width: @screen__m) {
+
+    .catalog-product-view {
+
+        //DESCIPTION CONTENT
+        .product.info.detailed {
+
+            .data.item.content {
+                margin-top: 8px !important;
+                padding: 10px 24px !important;
+            }
+
+            .product.data.items {
+                margin-right: 0;
+                margin-left: 0;
+
+                .data.item.title.active a {
+                    border: none !important;
+                }
+
+                .data.item.title a {
+                    color: @primary__color;
+                }
+
+                .additional-attributes-wrapper table.table.additional-attributes tbody tr td {
+                    text-align: left;
+                    color: @gray__color__2;
+
+                    &:before {
+                        color: @gray__color__1 !important;
+                    }
+                }
+
+            }
+
+            .product.data.items .item.title a:after {
+                transform: rotate(-90deg);
+                right: 20px;
+                top: 8px;
+                font-size: 17px;
+                color: @primary__color;
+            }
+
+            .product.data.items .item.title.active a {
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
+
+        }
+    }
+}

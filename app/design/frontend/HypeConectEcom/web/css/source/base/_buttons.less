@@ -1,0 +1,113 @@
+//
+//  Buttons variables
+//  _____________________________________________
+// lib/web/css/source/lib/variables/_buttons.less
+//
+
+
+//  Font style
+@button__font-size: 16px;
+@button__font-weight: 400;
+@button__padding: 15px 20px;
+@button__border-radius: 4px;
+
+//  Default = secondary button
+@button__color: @primary__color;
+@button__background: @white__color;
+@button__border: 1px solid @primary__color;
+
+@button__hover__color: @white__color;
+@button__hover__background: @primary__color;
+@button__hover__border: @button__border;
+
+@button__active__color: @white__color;
+@button__active__background: @primary__color;
+@button__active__border: @button__border;
+
+//  Primary button
+@button-primary__font-size: @button__font-size;
+@button-primary__font-weight: @button__font-weight;
+@button-primary__padding: @button__padding;
+
+@button-primary__background: @primary__color;
+@button-primary__border: 1px solid @primary__color__light;
+@button-primary__color: @white__color;
+
+@button-primary__hover__background: @primary__color__light;
+@button-primary__hover__border: 1px solid @primary__color__light;
+@button-primary__hover__color: @white__color;
+
+@button-primary__active__background: @primary__color__light;
+@button-primary__active__border: @button-primary__hover__border;
+@button-primary__active__color: @white__color;
+
+
+//  Large button
+@button__font-size__l: @font-size__l;
+@button__line-height__l: @font-size__l + 4;
+@button__padding__l: 20px 30px;
+
+//  Small button
+@button__font-size__s: 11px;
+@button__line-height__s: @button__font-size__s + 1;
+@button__padding__s: @indent__xs 8px;
+
+
+//default button style
+.default-button {
+    font-size: @button__font-size;
+    font-weight: @button__font-weight;
+    padding: @button__padding;
+    border-radius: @button__border-radius;
+}
+
+//default button style -- primary
+.default-button-primary {
+    color: @button-primary__color;
+    background: @button-primary__background;
+    border: @button-primary__border;
+
+    &:hover {
+        color: @button-primary__hover__color;
+        background: @button-primary__hover__background;
+        border: @button-primary__border;
+    }
+}
+
+//default button style -- secondary
+.default-button-secondary {
+    color: @button__color;
+    background: @button__background;
+    border: @button__border;
+
+    &:hover {
+        color: @button__hover__color;
+        background: @button__hover__background;
+        border: @button__hover__border;
+    }
+}
+
+
+.secondary {
+    a.action.secondary {
+        .default-button();
+        .default-button-secondary();
+    }
+}
+
+.primary {
+    a.action.primary {
+        .default-button();
+        .default-button-primary();
+    }
+}
+
+a.pagebuilder-button-secondary {
+    .default-button();
+    .default-button-secondary();
+}
+
+a.pagebuilder-button-primary {
+    .default-button();
+    .default-button-primary();
+}

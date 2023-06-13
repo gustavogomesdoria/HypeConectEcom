@@ -1,0 +1,207 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common = true) {
+    .account {
+        .sidebar.sidebar-main {
+            .block-collapsible-nav {
+                .content {
+                    background: @white__color;
+                    .box-shadow();
+                    padding-left: 10px;
+                }
+
+                ul.nav.items {
+                    li.nav.item {
+                        margin: 5px 0 0 26px;
+
+                        a {
+                            font-size: 16px;
+                            padding: 10px 18px 10px 23px;
+                            color: @gray__color__2;
+
+                            &:hover {
+                                background: none;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    li.nav.item:before {
+                        font-family: 'PhosphorIcons';
+                        position: absolute;
+                        margin: 4px 0 0 -11px;
+                        color: @gray__color__2;
+                    }
+
+                    //minha conta
+                    li.nav.item:nth-child(1) {
+                        &:before {
+                            content: "\e92a";
+                            font-size: 28px;
+                        }
+                    }
+
+                    //meus dados
+                    li.nav.item:nth-child(2) {
+                        &:before {
+                            content: "\e933";
+                            font-size: 24px;
+                        }
+                    }
+
+                    //meus endereços
+                    li.nav.item:nth-child(3) {
+                        &:before {
+                            content: "\e934";
+                            font-size: 24px;
+                        }
+                    }
+
+                    //meus pedidps
+                    li.nav.item:nth-child(4) {
+                        &:before {
+                            content: "\e91a";
+                            font-size: 28px;
+                        }
+                    }
+
+                    //meus favoritos
+                    li.nav.item:nth-child(5) {
+                        &:before {
+                            content: "\e912";
+                            font-size: 30px;
+                        }
+                    }
+
+                    //meus comentários
+                    li.nav.item:nth-child(6) {
+                        &:before {
+                            content: "\e931";
+                            font-size: 23px;
+                        }
+                    }
+
+                    //newsletter
+                    li.nav.item:nth-child(7) {
+                        &:before {
+                            content: "\e930";
+                            font-size: 23px;
+                        }
+                    }
+
+                    li.nav.item:last-child {
+                        margin-left: 0;
+                    }
+
+                }
+
+                li.nav.item.current {
+                    > strong {
+                        border-color: @white__color;
+                        text-decoration: underline;
+                        color: @primary__color;
+                        font-size: 16px;
+                        padding: 10px 18px 10px 23px;
+                    }
+
+                    &:before {
+                        color: @primary__color !important;
+                    }
+
+                    > a {
+                        border: none;
+                        text-decoration: underline;
+                        strong{
+                             color: @primary__color;
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+    }
+}
+
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+@media only screen and (max-width: @screen__m) {
+    .account {
+        .block-collapsible-nav {
+            top: -12px;
+            .box-shadow();
+
+            .title {
+                border: none;
+                padding: 20px 40px 15px 15px;
+
+                strong {
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: @primary__color;
+                }
+
+                &:after {
+                    transform: rotate(-180deg);
+                    font-size: 15px;
+                    line-height:2.8rem;
+                }
+            }
+        }
+
+
+    }
+}
+
+
+//
+//  Style for 'tablet' devices
+//  ---------------------------------------------
+
+
+@media only screen and (max-width: @screen__l) {
+    .account {
+        .sidebar.sidebar-main {
+            .block-collapsible-nav {
+
+                .content {
+                    padding-left: 0;
+                }
+
+                ul.nav.items {
+
+                    li.nav.item a {
+                        font-size: 14px;
+                        padding: 10px 10px 10px 16px;
+                    }
+
+                    li.nav.item.current strong {
+                        font-size: 16px;
+                        padding: 8px 18px 10px 16px;
+                    }
+
+                    li.nav.item:nth-child(1),
+                    li.nav.item:nth-child(4),
+                    li.nav.item:nth-child(5) {
+                        &:before {
+                            font-size: 24px;
+                        }
+                    }
+
+                    li.nav.item:nth-child(2),
+                    li.nav.item:nth-child(3),
+                    li.nav.item:nth-child(6),
+                    li.nav.item:nth-child(7) {
+                        &:before {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

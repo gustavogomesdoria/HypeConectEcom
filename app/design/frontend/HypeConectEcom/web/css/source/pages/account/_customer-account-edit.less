@@ -1,0 +1,143 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common = true) {
+    .account.customer-account-edit {
+        .fieldset.info, .fieldset.password {
+            .box-bordered();
+            padding: 24px;
+        }
+
+        fieldset.fieldset.additional_info {
+            display: none;
+        }
+
+        .fieldset.info {
+            width: 57%;
+            margin-bottom: 30px;
+            float: left;
+
+            legend.legend {
+                display: none;
+            }
+
+            .field.choice:last-child {
+                display: none;
+            }
+
+            .field.taxvat, .field.field-dob {
+                input {
+                    .readonly();
+                }
+
+                button.ui-datepicker-trigger {
+                    display: none;
+                }
+            }
+
+            .field.telephone {
+                width: 48%;
+            }
+
+            .field-name-firstname,
+            .field.field-dob {
+                width: 48%;
+                float: left;
+            }
+
+            .field-name-lastname,
+            .field.taxvat {
+                width: 48%;
+                float: right;
+            }
+
+        }
+
+        .fieldset.password {
+            width: 40.5%;
+            float: right;
+
+            legend.legend {
+                border: none;
+                margin: 0;
+
+                p {
+                    font-weight: 600;
+                    font-size: 17px;
+                    color: @gray__color__1;
+
+                    span {
+                        font-weight: 400;
+                        color: @gray__color__2;
+                        display: block;
+                        line-height: 19px;
+                        font-size: 15px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+
+        .actions-toolbar{
+            float: left;
+            clear: left;
+        }
+
+    }
+}
+
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+@media only screen and (max-width: @screen__m) {
+    .account.customer-account-edit {
+
+        .fieldset.info {
+            width: 100%;
+
+            .field.telephone,
+            .field-name-firstname,
+            .field.field-dob,
+            .field-name-lastname,
+            .field.taxvat {
+                width: 100%;
+                float: none;
+            }
+        }
+
+        .fieldset.password {
+            width: 100%;
+        }
+    }
+}
+
+
+//
+//  Style for 'tablet' devices
+//  ---------------------------------------------
+
+
+@media only screen and (min-width: @screen__m) and (max-width: @screen__l) {
+    .account.customer-account-edit {
+
+        .fieldset.info {
+            width: 100%;
+
+            .field.telephone {
+                width: 48%;
+            }
+
+            .field-name-firstname,
+            .field-name-lastname {
+                width: 100%;
+                float: none;
+            }
+        }
+
+        .fieldset.password {
+            width: 100%;
+        }
+
+    }
+}

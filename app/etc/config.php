@@ -304,7 +304,7 @@ return [
         'Magento_Tax' => 1,
         'Magento_TaxGraphQl' => 1,
         'Magento_TaxImportExport' => 1,
-        'Magento_TwoFactorAuth' => 1,
+        'Magento_TwoFactorAuth' => 0,
         'Magento_ThemeGraphQl' => 1,
         'Magento_Translation' => 1,
         'Magento_AdminAdobeImsTwoFactorAuth' => 1,

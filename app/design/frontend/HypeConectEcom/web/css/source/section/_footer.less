@@ -1,0 +1,263 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common = true) {
+    .page-wrapper{
+        .relative {
+        overflow: hidden;
+
+        .pagebuilder-column-line {
+            flex-wrap: wrap;
+            padding-left: 7%;
+
+            .columns {
+                min-width: 230px;
+                width: 20% !important;
+            }
+        }
+
+        .foot {
+            &-whatsApp {
+                position: relative;
+
+                &::before {
+                    content: '\e92d';
+                    font-family: "PhosphorIcons";
+                    border-radius: 50%;
+                    background-color: @success__color;
+                    position: absolute;
+                    color: @white__color;
+                    left: 0;
+                    padding: 4px 3px 0px 10px;
+                    font-size: 27px;
+                }
+            }
+
+            &-tel {
+                position: relative;
+
+                &::before {
+                    content: "\e91e";
+                    font-family: "PhosphorIcons";
+                    border-radius: 50%;
+                    background-color: @primary__color__lighter;
+                    position: absolute;
+                    color: @white__color;
+                    left: 0;
+                    padding: 4px 3px 0px 10px;
+                    font-size: 27px;
+                }
+
+            }
+
+            &-sac {
+                position: relative;
+
+                &::before {
+                    content: "\e911";
+                    font-family: "PhosphorIcons";
+                    border-radius: 50%;
+                    background-color: @primary__color__lighter;
+                    position: absolute;
+                    color: @white__color;
+                    left: 0;
+                    padding: 4px 3px 0px 10px;
+                    font-size: 27px;
+                }
+            }
+
+            &-f {
+                position: relative;
+
+                a {
+                    position: absolute;
+                    bottom: 32px;
+
+                    span {
+                        opacity: 0;
+                    }
+                }
+
+                &::before {
+                    content: "\e90e";
+                    font-family: "PhosphorIcons";
+                    color: @white__color;
+                    font-size: 54px;
+                }
+
+            }
+
+            &-l {
+                position: relative;
+
+                a {
+                    position: absolute;
+                    bottom: 32px;
+                    left: 50px;
+
+                    span {
+                        opacity: 0;
+                    }
+                }
+
+                &::before {
+                    content: "\e915";
+                    font-family: "PhosphorIcons";
+                    color: @white__color;
+                    font-size: 54px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50px;
+                }
+            }
+
+            &-i {
+                position: relative;
+
+                a {
+                    position: absolute;
+                    bottom: 32px;
+                    left: 102px;
+
+                    span {
+                        opacity: 0;
+                    }
+                }
+
+                &::before {
+                    content: "\e913";
+                    font-family: "PhosphorIcons";
+                    color: @white__color;
+                    font-size: 54px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 100px;
+                }
+            }
+
+            &-y {
+                position: relative;
+
+                a {
+                    position: absolute;
+                    bottom: 32px;
+                    left: 150px;
+
+                    span {
+                        opacity: 0;
+                    }
+                }
+
+                &::before {
+                    content: "\e92f";
+                    font-family: "PhosphorIcons";
+                    color: @white__color;
+                    font-size: 54px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 150px;
+                }
+            }
+        }
+    }
+
+    .border-top {
+        border-top: solid 1px @gray__color__7;
+
+        img {
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+    }
+        .page-footer{
+            background-color: @gray__color__8;
+            padding-bottom: 0;
+        }
+    }
+    .text-center-desk {
+        .logo-footer{
+            margin: 30px 30px 0 0;
+            img{
+                width: 158px;
+                min-width: 158px;
+            }
+        }
+
+    }
+}
+
+//
+// Style for 'tablet' devices
+//
+@media only screen and (max-width: @screen__l) {
+    .page-wrapper {
+        .relative {
+            .pagebuilder-column-line{
+                .columns {
+                    min-width: 50%;
+                }
+            }
+        }
+    }
+
+}
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+
+@media only screen and (max-width: @screen__m) {
+    .footer-sitemap-pool, .footer-sitemap-cent, .footer-site-map-ate {
+        display: none;
+    }
+
+    .drop-mobal-pool, .drop-mobal-ate, .drop-mobile-ent {
+        height: 40px;
+
+        &:after {
+            content: "\e904";
+            font-family: "PhosphorIcons";
+            float: right;
+            color: #fff;
+            font-size: 26px;
+            position: relative;
+            top: -34px;
+            right: 60px;
+        }
+
+    }
+
+    .dropdown-down {
+        &:after {
+            content: "\e902";
+            font-family: "PhosphorIcons";
+            float: right;
+            color: #fff;
+        }
+    }
+
+    .text-center-desk {
+        align-items: flex-start;
+            .logo-footer{
+                margin: 0 0 20px 0;
+                img{
+                    width: initial;
+                    min-width: initial;
+                }
+            }
+    }
+
+    .relative {
+        padding-top: 0 !important;
+
+        .pagebuilder-column-line {
+            padding-left: 0% !important;
+
+            .columns {
+                min-width: initial;
+                border-bottom: 1px solid;
+            }
+        }
+    }
+}
+

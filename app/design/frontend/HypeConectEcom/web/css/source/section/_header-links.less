@@ -1,0 +1,48 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common = true) {
+    header.page-header {
+        .customer-menu {
+            ul.header.links {
+                .box-shadow();
+                .box-bordered();
+                padding: 4px 10px;
+
+                li {
+                    a {
+                        color: @gray__color__1;
+                        text-decoration: none;
+                        line-height: 13px;
+                    }
+
+
+                    &.link.authorization-link {
+                        display: block;
+                        height: 27px;
+                        overflow: hidden;
+
+                        a {
+                            text-decoration: none!important;
+                            font-weight: 400!important;
+
+                            &:last-child {
+                                display: none;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+
+
+@media only screen and (max-width: @screen__m) {
+
+}
