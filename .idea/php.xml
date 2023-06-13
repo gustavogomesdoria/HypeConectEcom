@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
-=======
   <component name="MessDetector">
     <phpmd_settings>
       <MessDetectorConfiguration tool_path="$PROJECT_DIR$/vendor/bin/phpmd" />
@@ -24,7 +22,6 @@
       <PhpCSFixerConfiguration tool_path="$PROJECT_DIR$/vendor/bin/php-cs-fixer" />
     </phpcsfixer_settings>
   </component>
->>>>>>> cd4631bf4be2965ca06cec794f931ff3dd91fc26
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/magento/magento-coding-standard" />
@@ -579,8 +576,6 @@
       <path value="$PROJECT_DIR$/vendor/opensearch-project/opensearch-php" />
     </include_path>
   </component>
-<<<<<<< HEAD
-=======
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
@@ -600,5 +595,4 @@
   <component name="PsalmOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
->>>>>>> cd4631bf4be2965ca06cec794f931ff3dd91fc26
 </project>
