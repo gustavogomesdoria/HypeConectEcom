@@ -1,0 +1,113 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common =true) {
+    .catalog-product-view {
+        .sellers-wrapper {
+            .box-bordered();
+            width: 100%;
+
+            a#load-sellers {
+                color: @primary__color;
+                display: inline-flex;
+                text-align: center;
+                cursor: pointer;
+                padding: 15px 0 10px 0;
+                width: 100%;
+                justify-content: center;
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                span {
+                    text-decoration: underline;
+                    font-weight: 400;
+                    font-size: 15px;
+                }
+
+                i {
+                    font-size: 30px;
+                    margin-left: 15px;
+                }
+            }
+
+            .block-sellers {
+                display: none;
+            }
+
+            ul.sellers-list {
+                max-height: 250px;
+                overflow-y: auto;
+                .scrollbar();
+
+                li {
+                    border-top: 1px solid @gray__color__7;
+                    padding: 25px;
+                    padding: 15px;
+                    margin: 0 5px 0 0;
+
+                    .seller-price {
+                        font-weight: 600;
+                        font-size: 15px;
+                        color: @gray__color__1;
+                        margin: 0;
+
+                        span {
+                            color: @primary__color;
+                        }
+                    }
+
+                    .shipping-price {
+                        color: @gray__color__3;
+                        font-weight: 400;
+                        font-size: 13px;
+                        margin: 0;
+                    }
+
+                    &:before {
+                        content: "◯";
+                        font-size: 22px;
+                        float: left;
+                        margin: 10px 15px 15px 0;
+                        color: @gray__color__7;
+                    }
+
+                    &.selected {
+                        background: #F0F3FE;
+
+                        &:before {
+                            content: "◉";
+                            color: @primary__color;
+                            font-size: 22px;
+                            float: left;
+                            margin: 10px 15px 15px 0;
+                        }
+                    }
+                }
+            }
+
+            .actions-toolbar {
+                .primary {
+                    display: block;
+                    width: 100%;
+
+                    a.action.primary {
+                        width: 100%;
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}
+
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+@media only screen and (max-width: @screen__m) {
+    .catalog-product-view {}
+}

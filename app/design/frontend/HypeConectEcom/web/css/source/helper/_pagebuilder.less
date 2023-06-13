@@ -1,0 +1,42 @@
+//Classes to help pagebuilder configuration
+
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common = true) {
+
+    .clearfix{
+        clear: both;
+        width: 100%;
+    }
+        .text-w{
+            p:nth-child(odd){
+                span{
+                    font-weight: 300 !important;
+                }
+            }
+            &-2{
+                span{
+                    font-weight: 300 !important;
+                    strong{
+                        font-weight: initial !important;
+                    }
+                }
+            }
+            &-3{
+                span{
+                    font-weight: 300 !important;
+                }
+            }
+        }
+}
+
+
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+
+@media only screen and (max-width: @screen__m) {
+    .text-center-mobile{
+        text-align: center;
+    }
+}

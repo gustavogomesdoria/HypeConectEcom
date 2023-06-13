@@ -1,0 +1,87 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common =true) {
+    .catalog-product-view {
+
+        .swatch-attribute {
+            .swatch-attribute-label {
+
+                font-weight: 500;
+                font-size: 13px;
+                color: @gray__color__1;
+
+                &:after {
+                    content: ":";
+                }
+            }
+
+            .swatch-attribute-selected-option {
+                padding-left: 5px;
+                font-size: 13px;
+                color: @gray__color__3;
+            }
+        }
+
+        .swatch-attribute-options {
+            padding: 1px;
+            max-height: 55px;
+            overflow: auto;
+            border-radius: 8px;
+            margin-bottom: 13px;
+            .scrollbar();
+        }
+
+        //Atributo Color
+        .swatch-attribute.color, .swatch-attribute.variant_color {
+            .swatch-attribute-options {
+                .swatch-option.color {
+                    width: 31px;
+                    height: 32px;
+                    border-radius: 100%;
+                    max-width: initial;
+
+                    &.selected {
+                        outline: 1px solid @gray__color__2;
+                        border: 1px solid @white__color;
+                        box-shadow: none;
+
+                    }
+
+                    &:not(.disabled):hover {
+                        outline: 1px solid @gray__color__2;
+                        border: 1px solid @white__color;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+
+        //Atributo text
+        .swatch-option.text {
+            background-color: @white__color;
+            color: @gray__color__4;
+            border: 1px solid @gray__color__3;
+            font-weight: 500;
+            border-radius: 4px;
+
+            &.selected {
+                background-color: @gray__color__1;
+                color: @white__color;
+                border: @gray__color__1;
+                outline: none;
+                box-shadow: none;
+                padding: 5px 9px 5px 8px;
+            }
+        }
+
+    }
+}
+
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+@media only screen and (max-width: @screen__m) {
+    .catalog-product-view {}
+}

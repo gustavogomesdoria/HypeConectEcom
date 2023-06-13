@@ -1,0 +1,56 @@
+//Classes to help pagebuilder configuration
+
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common =true) {
+
+    .products.list {
+        .box-bordered();
+        padding: 20px;
+    }
+
+
+    //ORDER
+    .amasty-shopby-product-list {
+        .toolbar.toolbar-products {
+
+            .modes {
+                margin-right: 13px;
+
+                .modes-mode {
+                    padding: 7px 7px;
+
+                    &:before {
+                        color: @gray__color__3;
+                    }
+                }
+            }
+
+            .toolbar-amount,
+            .toolbar-number {
+                font-weight: 400;
+                color: @gray__color__3;
+                margin-top: 4px;
+            }
+
+
+            .toolbar-sorter.sorter {
+                .box-bordered();
+
+                label.sorter-label {
+                    display: none;
+                    ;
+                }
+            }
+
+        }
+    }
+
+}
+
+
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+
+@media only screen and (max-width: @screen__m) {}

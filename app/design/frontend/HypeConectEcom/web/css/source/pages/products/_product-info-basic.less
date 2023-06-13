@@ -1,0 +1,222 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common =true) {
+    .catalog-product-view {
+
+        .product-attr-title {
+            width: 100%;
+        }
+
+        .product.attribute.overview,
+        .product-social-links,
+        .product.pricing {
+            display: none;
+        }
+
+        .product-info-basic {
+            .box-bordered();
+            width: 68%;
+            padding: 20px;
+            display: flex;
+            float: left;
+
+            .page-title-wrapper {
+                .page-title {
+                    color: @gray__color__1;
+                    font-size: 21px;
+                    font-weight: 600;
+                    line-height: 27px;
+                    margin: 0 0 13px 0px;
+                }
+            }
+
+            .requisition-list-action .action.toggle {
+                display: contents;
+            }
+
+
+            .product.attribute.overview {
+
+                p,
+                span,
+                strong,
+                div {
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: @gray__color__4;
+                }
+            }
+
+
+            .product-reviews-summary.empty {
+                float: left;
+                margin: -3px 0 15px 10px;
+            }
+
+            .product-reviews-summary {
+                .reviews-actions {
+                    .action.view {
+                        text-decoration: underline;
+                        color: @gray__color__4;
+                        margin-left: 10px;
+                    }
+
+                    .action.add {
+                        display: none;
+                    }
+                }
+            }
+
+            .product.attribute.sku {
+                margin-bottom: 6px;
+                float: left;
+
+                strong.type {
+                    display: none;
+                }
+
+                .value {
+                    color: @gray__color__3;
+                    font-size: 14px;
+
+                    &:before {
+                        content: "Código: ";
+                        font-size: 14px;
+                        margin-right: 4px;
+                    }
+                }
+
+            }
+
+
+            //ACTION TO WISHLIST
+            .action.towishlist {
+                clear: both;
+                display: block;
+
+                &:before {
+                    content: "\e912";
+                    font-family: 'PhosphorIcons';
+                    font-size: 25px;
+                    position: relative;
+                    top: 9px;
+                }
+
+                span {
+                    text-decoration: underline;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            .split.button.wishlist {
+                button.action.split {
+                    &:before {
+                        content: "\e912";
+                        font-family: 'PhosphorIcons';
+                        font-size: 25px;
+                        position: relative;
+                        top: 2px;
+                        display: initial;
+                    }
+
+                    span {
+                        color: @primary__color;
+                        text-transform: capitalize;
+                        text-decoration: underline;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                }
+
+                button.change {
+                    display: none;
+                }
+            }
+
+
+        }
+
+    }
+
+    //RELATED PRODUCTS
+    .block-products-list {
+        .products {
+            .block-title.title {
+                span.block-related-heading {
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+
+
+}
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+@media only screen and (max-width: @screen__m) {
+    .catalog-product-view {
+        .columns .column.main {
+            padding-bottom: 0;
+        }
+
+        .page-header {
+            margin-bottom: 10px;
+        }
+
+        .product-attr-title {
+            background: @white__color;
+            .box-bordered();
+            border-bottom: none;
+            padding: 20px 20px 0 20px;
+        }
+
+        .product-info-basic {
+            width: 100%;
+            margin-top: 20px;
+            flex-direction: column;
+            border: none;
+            padding: 0;
+
+            .page-title-wrapper {
+                .page-title {
+                    margin-top: 15px;
+                }
+            }
+
+            .product-reviews-summary {
+                margin-bottom: 15px;
+
+                .reviews-actions {
+                    .action.view {
+                        font-size: 15px;
+                    }
+
+                    .action.add {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: @screen__m) and (max-width: @screen__l) {
+
+    .catalog-product-view {
+
+        //RIGHT COLUMN --- PRICE
+        .product-info-basic {
+            width: 100% !important;
+        }
+    }
+}

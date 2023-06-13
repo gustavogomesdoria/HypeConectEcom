@@ -1,0 +1,103 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common = true) {
+    .account.customer-address-index {
+        .block.block-addresses-default{
+            .block-title{
+                display: none;
+            }
+        }
+
+        td.col.actions {
+            line-height: 10px;
+        }
+
+        .additional-addresses{
+            .table-additional-addresses-items{
+                .col.zip{
+                    text-align: left;
+                }
+                .col.actions{
+                    text-align: right;
+                    .action.delete{
+                        color: red;
+                    }
+                }
+            }
+        }
+
+        .modal-popup.confirm._show {
+            .modal-content {
+                padding-top: 20px;
+                div {
+                    padding-top: 5px;
+                    color: @gray__color__2;
+
+                    &:before {
+                        content: "Excluir Endereço";
+                        font-weight: 700;
+                        position: absolute;
+                        top: 26px;
+                        color: @primary__color;
+                        font-size: 21px;
+                    }
+                }
+            }
+
+            .action-primary.action-accept {
+                &:before{
+                    content: 'Sim, excluir';
+                }
+
+                span{
+                    display: none;
+                }
+            }
+
+        }
+    }
+}
+
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+@media only screen and (max-width: @screen__m) {
+    .account.customer-address-index {
+        table.table-additional-addresses-items{
+            .col.zip{
+               text-align: right!important;
+            }
+            .col.actions{
+                text-align: left;
+
+                .action-group{
+                    border-top: 1px solid @gray__color__7;
+                }
+
+                &:before{
+                    display: none!important;
+                }
+
+                a.action {
+                    display: inline-block!important;
+                    border-top: none!important;
+                    margin: 0 10px 6px 0;
+                }
+             }
+        }
+    }
+}
+
+
+//
+//  Style for 'tablet' devices
+//  ---------------------------------------------
+
+
+@media only screen and (max-width: @screen__l) {
+    .account.customer-address-index {
+
+    }
+}

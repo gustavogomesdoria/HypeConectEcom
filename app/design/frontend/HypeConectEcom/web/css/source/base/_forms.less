@@ -1,0 +1,164 @@
+//
+//  Form variables
+//  _____________________________________________
+// lib/web/css/source/lib/variables/_forms.less
+
+// Default inputs
+@form-element-input__background: @white__color;
+@form-element-input__border-color: @gray__color__7;
+@form-element-input__border-radius: 4px;
+@form-element-input__padding: 0 15px;
+@form-element-input__height: 49px;
+@form-element-input__font-size: 16px;
+@form-element-input__color: @gray__color__3;
+@form-element-input__font-weight: 400;
+@form-element-input__font-style: normal;
+
+//  Placeholder
+@form-element-input-placeholder__color: @gray__color__3;
+
+//  Disabled state
+@form-element-input__disabled__background: @gray__color__7;
+@form-element-input__disabled__border: @gray__color__7;
+@form-element-input__disabled__color: @gray__color__1;
+
+//  Focus state
+@form-element-input__focus__border: @gray__color__6;
+
+//  Form field label
+@form-field-label__color: @gray__color__1;
+@form-field-label__font-size: 16px;
+@form-field-label__font-weight: 600;
+@form-field-label__line-height: 16px;
+
+//  Form field label asterisk
+@form-field-label-asterisk__color: @gray__color__1;
+@form-field-label-asterisk__font-size: 16px;
+@form-field-label-asterisk__margin: 0 0 0 2px;
+
+
+//Default inputs
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="search"],
+input[type="number"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="file"],
+input[type="image"],
+input[type="range"],
+input[type="reset"],
+input[type="time"],
+input[type="week"],
+input[type="checkbox"],
+.checkbox,
+textarea,
+select,
+.input-text {
+    &:focus {
+        box-shadow: none;
+        outline: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        border: 1px solid;
+    }
+}
+
+// Readonly
+input[type="text"]:read-only,
+input[type="password"]:read-only,
+input[type="url"]:read-only,
+input[type="tel"]:read-only,
+input[type="search"]:read-only,
+input[type="number"]:read-only,
+input[type="datetime"]:read-only,
+input[type="email"]:read-only,
+textarea:read-only,
+select.readonly {
+    background-color: @gray__color__7;
+    color: @gray__color__1;
+    pointer-events: none;
+}
+
+// Select
+select {
+    height: 46px;
+}
+
+// radio button
+input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    accent-color: @primary__color;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+
+//checkbox
+input[type="checkbox"],
+.checkbox {
+    all: unset;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    margin-right: 2px;
+    background: @white__color;
+    border-radius: 4px;
+    border: 1px solid @gray__color__5;
+    padding: 0;
+    transition: 0.4s ease;
+    cursor: pointer;
+
+    &:hover {
+        border-color: @primary__color;
+    }
+
+    &:checked {
+        background-color: @primary__color;
+        border-color: @primary__color;
+
+        &:after {
+            content: "\e908";
+            font-family: 'PhosphorIcons';
+            color: @white__color;
+            position: absolute;
+            margin: 0px;
+            font-size: 23px;
+            line-height: 20px;
+        }
+    }
+}
+
+//datepicker
+.field.date ._has-datepicker,
+.field-dob ._has-datepicker {
+    width: 100%;
+    margin-right: 0;
+}
+._has-datepicker ~ .ui-datepicker-trigger {
+    margin-top: -7px;
+    margin-left: -40px;
+
+    &:before {
+        color: @gray__color__4;
+    }
+}
+
+.field-dob{
+    ._has-datepicker.mage-error{
+        margin-bottom: 20px;
+    }
+    #dob-error{
+        position: absolute;
+        margin-top: -12px;
+    }
+}

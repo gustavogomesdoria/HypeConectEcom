@@ -1,0 +1,115 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common = true) {
+    .customer-account-create {
+
+        h1.page-title {
+            border-bottom: 1px solid @gray__color__7;
+            width: 100%;
+            padding: 14px 0;
+            font-size: 26px;
+            margin: 0 0 22px 0;
+        }
+
+        .form.create.account {
+            width: 100%;
+            display: grid;
+            grid-template-areas:
+                'form1 form2'
+                'form1 act';
+            gap: 30px;
+        }
+
+        .fieldset.create.info {
+            grid-area: form1;
+        }
+
+        .fieldset.create.account {
+            grid-area: form2;
+        }
+
+        .actions-toolbar {
+            grid-area: act;
+
+            .primary {
+                width: 100%;
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+
+        .fieldset.create.info, .fieldset.create.account {
+            .box-bordered();
+            .box-shadow();
+            padding: 24px;
+            width: 100%;
+            margin-bottom: 0;
+            min-width: 600px;
+
+            &:after {
+                display: none;
+            }
+
+        }
+
+        .link-bartofil-store {
+            text-decoration: underline;
+            position: relative;
+            top: -13px;
+        }
+
+        .field.choice:not(.field.choice.newsletter, .field.choice.terms){
+            display: none;
+        }
+    #is_accept-error{
+        position: absolute;
+        margin-top: -40px;
+    }
+    }
+}
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+
+
+@media only screen and (max-width: @screen__m) {
+    .customer-account-create {
+        .form.create.account {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .actions-toolbar {
+            width: 100%;
+        }
+
+        .fieldset.create.info, .fieldset.create.account {
+            min-width: initial;
+        }
+
+        .field.choice{
+            label.label span{
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+
+
+//
+//  Style for 'tablet' devices
+//  ---------------------------------------------
+
+
+@media only screen and (max-width: @screen__l) {
+    .customer-account-create {
+        .fieldset.create.info, .fieldset.create.account {
+            min-width: 360px;
+        }
+    }
+}

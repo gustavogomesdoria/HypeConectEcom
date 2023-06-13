@@ -1,0 +1,64 @@
+//Classes to help pagebuilder configuration
+
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common = true) {
+    .catalog-category-view {
+        .page-wrapper {
+            .page-title-wrapper {
+                .page-title {
+                    .base {
+                        font-size: 29px;
+                        line-height: 29px;
+                        letter-spacing: 0.02em;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}
+
+
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+
+@media only screen and (max-width: @screen__m) {
+    .catalog-category-view {
+        .page-wrapper {
+            .page-header {
+                margin-bottom: 70px;
+            }
+
+            .breadcrumbs {
+                display: block;
+                margin: 18px 0 36px;
+            }
+
+            .page-title-wrapper {
+                .page-title {
+                    margin-bottom: 0;
+
+                    .base {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            main#maincontent {
+                margin-top: 0;
+
+                .category-view {
+                    .category-description {
+                        margin-bottom: 36px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

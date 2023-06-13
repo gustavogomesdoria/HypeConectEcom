@@ -1,0 +1,277 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common = true) {
+    .checkout-index-index,.checkout-cart-index {
+        .border-top{
+            p{
+                padding-left: 106px;
+            }
+        }
+        .relative {
+            border-top: 5px solid @primary__color;
+
+            .pagebuilder-column-line {
+                justify-content: space-around;
+
+                .columns {
+                    position: relative;
+                    .first-column{
+                        p:nth-child(3){
+                            margin-bottom: 25px;
+                        }
+                    }
+                    .foot {
+                        &-f, &-l, &-i, &-y {
+                            &::before {
+                                color: @primary__color;
+                            }
+                        }
+                        &-f{
+                            a{
+                                bottom: 42px;
+                            }
+                        }
+                        &-l{
+                            a{
+                                bottom: 54px;
+                                left: 55px;
+                            }
+                        }
+                        &-i{
+                            a{
+                                bottom: 61px;
+                                left: 109px;
+                            }
+                        }
+                        &-y{
+                            a{
+                                left: 165px;
+                                bottom: 74px;
+                            }
+                        }
+
+
+                    }
+                    .footer{
+                        &-pag{
+                            &-a {
+                                p {
+                                    color: transparent;
+                                }
+
+                                &::before {
+                                    content: '';
+                                    background-image: url('@{baseDir}images/pagVisa.svg');
+                                    height: 30px;
+                                    width: 41px;
+                                    display: block;
+                                    position: absolute;
+                                    top: 70px;
+                                    left: 17px;
+                                }
+                            }
+
+                            &-b {
+                                p {
+                                    color: transparent;
+                                }
+
+                                &::before {
+                                    content: '';
+                                    background-image: url('@{baseDir}images/pagMaster.svg');
+                                    height: 30px;
+                                    width: 41px;
+                                    display: block;
+                                    position: absolute;
+                                    top: 70px;
+                                    left: 66px;
+
+                                }
+                            }
+
+                            &-c {
+                                p {
+                                    color: transparent;
+                                }
+
+                                &::before {
+                                    content: '';
+                                    background-image: url('@{baseDir}images/pagAmex.svg');
+                                    height: 30px;
+                                    width: 41px;
+                                    display: block;
+                                    position: absolute;
+                                    top: 70px;
+                                    left: 114px;
+                                }
+                            }
+
+                            &-d {
+                                p {
+                                    color: transparent;
+                                }
+
+                                &::before {
+                                    content: '';
+                                    background-image: url('@{baseDir}images/pag.svg');
+                                    height: 30px;
+                                    width: 41px;
+                                    display: block;
+                                    position: absolute;
+                                    left: 161px;
+                                    top: 70px;
+                                }
+                            }
+
+                            &-e {
+                                p {
+                                    color: transparent;
+                                }
+
+                                &::before {
+                                    content: '';
+                                    background-image: url('@{baseDir}images/pagBack.svg');
+                                    height: 30px;
+                                    width: 41px;
+                                    display: block;
+                                    position: absolute;
+                                    top: 70px;
+                                    left: 208px;
+                                }
+                            }
+                        }
+                    }
+                    .foot{
+                        &-tel::before{
+                            padding: 5px 5px 0 11px;
+                            background-color: @primary__color__lighter;
+                        }
+                        &-whatsapp::before{
+                            padding: 6px 5px 0 11px;
+                        }
+                        &-sac::before{
+                           padding: 5px 4px 0 11px;
+                            background-color: @primary__color__lighter;
+                        }
+                        &-l::before{
+                           bottom: 20px;
+                            left: 55px;
+                        }
+                        &-i::before{
+                            bottom: 30px;
+                            left: 110px;
+                        }
+                        &-y::before{
+                            bottom: 40px;
+                            left: 165px;
+                        }
+                    }
+                    &.size {
+                        height: 110px;
+                        right: 36px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+// Style for 'tablet' devices
+//
+@media only screen and (max-width: @screen__xl) {
+    .checkout-index-index,.checkout-cart-index {
+        .relative {
+            .pagebuilder-column-line {
+                .columns {
+                    &.size {
+                        right: 102px;
+                    }
+                }
+            }
+        }
+    }
+    }
+@media only screen and (max-width: @screen__l) {
+    .checkout-index-index,.checkout-cart-index {
+        .page-wrapper {
+            .border-top{
+                p{
+                    padding-left: initial;
+                    padding-right: 5%;
+                }
+            }
+            .relative {
+                .pagebuilder-column-line {
+                    justify-content: flex-start;
+
+                    .columns {
+                        min-width: 27%;
+
+                        &.size {
+                            right: 3%;
+                            min-width: 222px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+//Mobile
+@media only screen and (max-width: @screen__m) {
+    .checkout-index-index,.checkout-cart-index {
+        .page-wrapper {
+            .relative {
+                padding-bottom: 0 !important;
+
+                .pagebuilder-column-line {
+                    flex-direction: column-reverse;
+                    position: relative;
+                    left: 16px;
+                    .columns {
+                        min-width: 93%;
+                        border-bottom: 1px solid @gray__color__7;
+                        padding-left: 0 !important;
+
+                        &.size {
+                            right: 0%;
+                            height: 130px;
+                        }
+
+                        .footer-pag {
+                            &-a::before {
+                                left: 0;
+                                top: 65px;
+                            }
+
+                            &-b::before {
+                                left: 50px;
+                                top: 66px;
+                            }
+
+                            &-c::before {
+                                left: 100px;
+                                top: 66px;
+                            }
+
+                            &-d::before {
+                                left: 152px;
+                                top: 66px;
+                            }
+                            &-e::before{
+                                top: 66px;
+                            }
+                        }
+                    }
+                }
+            }
+            .widget.block {
+                margin: 0;
+            }
+        }
+    }
+}

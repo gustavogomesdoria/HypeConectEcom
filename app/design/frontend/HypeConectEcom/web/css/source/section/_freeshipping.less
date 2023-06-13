@@ -1,0 +1,41 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common =true) {
+
+    img.icon-miniprogress {
+        position: absolute;
+        margin: 21px 0 0 19px;
+    }
+
+    #block-cart-list {
+        background: @green__color__3;
+        padding: 15px 20px 15px 53px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+
+        h4 {
+            color: @gray__color__1;
+            margin: 0 0 12px 0;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .minprogress {
+            background: @gray__color__7;
+            border: none;
+
+            .minprogress-active {
+                background: @green__color;
+            }
+        }
+    }
+
+}
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+
+
+@media only screen and (max-width: @screen__m) {}

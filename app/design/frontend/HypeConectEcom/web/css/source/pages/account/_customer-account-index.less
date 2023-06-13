@@ -1,0 +1,107 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common = true) {
+    .account.customer-account-index {
+        .page-title-wrapper {
+            display: none;
+        }
+
+
+        //REVIEWS - My Account
+        .block.block-reviews-dashboard {
+
+            .items {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .item {
+                    .box-bordered();
+                    padding: 15px 20px;
+                    width: 49%;
+                    margin-bottom: 0;
+
+                    .product-name a {
+                        color: @gray__color__1;
+                    }
+
+                    .rating-summary {
+                        border-top: 1px solid @gray__color__7;
+                        padding-top: 10px;
+                        margin-top: 2px;
+                        span.label {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        //Dashboard Orders
+        .block.block-dashboard-orders{
+            table.table-order-items{
+                margin-top: 26px;
+                .col.id{
+                   text-align: left;
+                }
+                .col.actions{
+                    text-align: right;
+
+                    a{
+                        text-decoration: underline;
+                    }
+                 }
+            }
+        }
+        //Dashboard addresses
+        .block-dashboard-addresses{
+            .block-content{
+                display: flex;
+                flex-direction: row-reverse;
+                .box-billing-address{
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+
+
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+
+@media only screen and (max-width: @screen__m) {
+    .account.customer-account-index {
+
+        //REVIEWS
+        .block.block-reviews-dashboard {
+            .items {
+                flex-direction: column;
+
+                .item {
+                    width: 100%;
+                    padding: 10px 15px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+
+        //Dashboard Orders
+        .block.block-dashboard-orders{
+            table.table-order-items{
+                margin-top: 8px;
+                .col.id{
+                   text-align: right;
+                }
+            }
+        }
+        //Dashboard addresses
+        .block-dashboard-addresses{
+            .block-content{
+                display: block;
+            }
+        }
+    }
+}

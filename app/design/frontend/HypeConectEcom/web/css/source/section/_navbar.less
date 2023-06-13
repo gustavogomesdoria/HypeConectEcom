@@ -1,0 +1,270 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common = true) {
+
+    #not_activated{
+        display: none;
+    }
+
+    .nav-sections {
+        background: @white__color;
+        border-bottom: 1px solid @gray__color__7;
+
+        a span {
+            font-weight: 600;
+            color: @gray__color__1;
+        }
+
+        .navigation {
+            background: @white__color;
+        }
+    }
+
+    .nav-sections-items {
+        .nav-sections-item-content {
+            .page-main {
+                .panel {
+                    display: none;
+                }
+
+                .rootmenu-list {
+                    // Menu Desktop All Category
+                    .all-category-wrapper {
+                        .verticalmenu02 {
+                            .vertical-list {
+                                .desktop-vertical-click {
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    padding: unset;
+                                    height: 72px;
+                                    justify-content: center;
+                                    top: 0;
+
+                                    .verticalmenu-arrow {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        &::before {
+                                            content: '';
+                                            background-image: url('@{baseDir}images/arrow-menu.svg');
+                                            position: unset;
+                                            width: unset;
+                                            height: unset;
+                                            background-size: 10px;
+                                            padding: 8px;
+                                            background-repeat: no-repeat;
+                                            transform: rotate(0);
+                                            background-color: unset;
+                                            border: 0;
+                                        }
+                                    }
+                                }
+                                >.category-item {
+                                    >a {
+                                        padding: 24px !important;
+                                    }
+
+                                    &.hover_allcategories {
+                                        >a {
+                                            color: @primary__color;
+                                            font-weight: 700;
+                                        }
+                                    }
+
+                                    .title_normal {
+                                        color: @primary__color;
+                                        font-weight: 600;
+                                    }
+
+                                    a.clearfix {
+                                        >span {
+                                            font-weight: 400;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    >li.category-item {
+                        .rootmenu-submenu {
+                            .category-item {
+                                >a {
+                                    padding: 24px !important;
+                                }
+                            }
+                        }
+                        &:hover {
+                            .rootmenu-click {
+                                .rootmenu-arrow {
+                                    background-color: unset;
+                                }
+                            }
+                        }
+
+                        .cat-arrow {
+                            display: none;
+                        }
+
+                        .rootmenu-click {
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            padding: unset;
+                            height: 72px;
+                            justify-content: center;
+
+                            .rootmenu-arrow {
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                &::after {
+                                    display: none;
+                                }
+
+                                &::before {
+                                    content: '';
+                                    background-image: url('@{baseDir}images/arrow-menu.svg');
+                                    position: unset;
+                                    width: unset;
+                                    height: unset;
+                                    background-size: 10px;
+                                    padding: 8px;
+                                    background-repeat: no-repeat;
+                                    transform: rotate(0);
+                                    background-color: unset;
+                                    border: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+
+
+@media only screen and (min-width: @screen__m) {
+    .nav-sections-items {
+        .nav-sections-item-content {
+            .page-main {
+                .rootmenu-list {
+                    >li.category-item {
+                        >.rootmenu-click {
+                            display: none;
+                        }
+                    }
+
+                    .all-category-wrapper {
+                        .vertical-list {
+                            .category-item {
+                                >.varticalmenu_main {
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+
+
+@media only screen and (max-width: @screen__m) {
+    .nav-sections-items {
+        .nav-sections-item-title {
+            display: none;
+        }
+
+        .nav-sections-item-content {
+            margin-top: 0;
+            padding: 0;
+
+            .page-main {
+                padding: 0;
+
+                .rootmenu {
+                    // Referente ao setor login no menu mobile
+                    .panel {
+                        background-color: @primary__color;
+                        padding: 24px;
+                        display: flex;
+                        align-items: center;
+
+                        &::before {
+                            content: "\e92a";
+                            font-family: 'PhosphorIcons';
+                            color: @secondary__color;
+                            font-size: 30px;
+                            margin: 0 20px 0 0;
+                        }
+
+                        .header {
+                            display: flex;
+                            flex-direction: column;
+                            border: 0 !important;
+
+                            span,
+                            a {
+                                color: @white__color !important;
+                                border: 0 !important;
+                                padding: 8px 0 0 0 !important;
+                                font-weight: 700;
+                            }
+
+                            .link {
+                                display: flex;
+                                align-items: center;
+
+                                span {
+                                    display: block;
+                                    margin: 0 4px;
+                                }
+                            }
+                        }
+                    }
+
+                    .rootmenu-list {
+                        .all-category-wrapper {
+                            display: none !important;
+                        }
+
+                        li.category-item {
+                            >a {
+                                padding: 24px !important;
+                            }
+
+                            .rootmenu-click {
+                                .rootmenu-arrow {
+                                    &.rootmenu-rotate {
+                                        &::before {
+                                            transform: rotate(90deg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,159 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common =true) {
+    .catalog-product-view {
+
+        //LIST
+        #product-review-container {
+            .block.review-list {
+
+                .block-title {
+                    display: none;
+                }
+
+                .block-content {
+                    ol.items.review-items {
+                        li.item.review-item {
+                            display: flex;
+                            flex-wrap: wrap;
+                            flex-direction: column;
+                            padding: 10px 0;
+                            border: none;
+
+                            .review-title {
+                                margin: 0;
+                                font-size: 16px;
+                                font-weight: 400;
+                                color: @black__color;
+                            }
+
+                            .review-content {
+                                margin-bottom: 0;
+                                color: @gray__color__4;
+                                font-size: 15px;
+                            }
+
+                            .rating-summary.item {
+                                display: inline-block;
+                                margin: 5px 0 0 0;
+
+                                .label.rating-label {
+                                    display: none;
+                                }
+                            }
+
+                            .review-details {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .review-toolbar {
+                        border-top-color: @gray__color__6;
+
+                        .pages {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        //FORM
+        .block.review-add {
+            form {
+                max-width: inherit;
+
+                legend.review-legend {
+                    margin: 0;
+                    span {
+                        font-weight: 600;
+                        font-size: 22px;
+                        color: @gray__color__1;
+                    }
+                }
+
+                .review-field-rating {
+                    .control.review-control-vote {
+                        margin-bottom: 0;
+                        position: relative;
+                        padding: 0;
+                        height: 24px;
+                        margin-top: 2px;
+                    }
+                }
+    
+                .fieldset {
+                    margin-bottom: 20px;
+
+                    label.label {
+                        font-size: 17px;
+                        line-height: 36px;
+                    }
+
+                    .field {
+                        margin: 10px 0 9px 0;
+                    }
+
+                    .field-group {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+
+                        .review-field-nickname,
+                        .review-field-summary {
+                            width: 49%;
+                        }
+
+                        .review-field-text {
+                            width: 100%;
+
+                            textarea {
+                                height: 75px;
+                            }
+                        }
+                    }
+                }
+
+                .actions-toolbar.review-form-actions {
+                    .action.submit.primary {
+                        background-color: @primary__color;
+                        color: @white__color;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+
+@media only screen and (max-width: @screen__m) {
+
+    .catalog-product-view {
+
+        //FORM
+        .block.review-add {
+            form {
+                .fieldset {
+                    .field-group {
+                        flex-direction: column;
+
+                        .review-field-nickname,
+                        .review-field-summary {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

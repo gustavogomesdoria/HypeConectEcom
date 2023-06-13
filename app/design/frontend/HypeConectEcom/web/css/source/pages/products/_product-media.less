@@ -1,0 +1,76 @@
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common =true) {
+    .catalog-product-view {
+
+        .product-info-basic {
+
+            .product.media {
+                width: 340px;
+                margin-right: 25px;
+                height: fit-content;
+
+                .fotorama__stage {
+                    .box-bordered();
+                    margin-bottom: 17px;
+                }
+
+                .fotorama__thumb {
+                    .box-bordered();
+                }
+
+                .fotorama__thumb-border {
+                    border-color: @primary__color;
+                    border-radius: 5px;
+                    border-width: 1px;
+                }
+
+                .fotorama__nav__frame {
+
+                    .fotorama__dot {
+                        border: none;
+                        width: 10px;
+                        height: 5px;
+                        background: @gray__color__6
+                    }
+
+                    &.fotorama__active {
+                        .fotorama__dot {
+                            background: @primary__color;
+                        }
+                    }
+                }
+
+                //THUMBNAIL
+                .fotorama__nav-wrap {
+                    .fotorama__arr {
+                        background: none;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+//
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+@media only screen and (max-width: @screen__m) {
+    .catalog-product-view {
+
+        .product-info-basic {
+
+            .product.media {
+                width: 90%;
+                margin: 0 auto;
+
+                .fotorama__stage {
+                    margin-bottom: 5px;
+
+                }
+            }
+        }
+    }
+}

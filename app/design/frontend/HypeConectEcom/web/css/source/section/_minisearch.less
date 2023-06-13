@@ -1,0 +1,92 @@
+//Classes to help pagebuilder configuration
+
+//
+//  Common (Both desktop and mobile)
+//  _____________________________________________
+& when (@media-common =true) {
+
+    .search-autocomplete {
+        .livesearch.popover-container {
+            .box-shadow();
+            border-radius: 0 0 4px 4px;
+            width: 617px;
+
+            .livesearch.products-container {
+                .livesearch.product-result {
+                    &:hover {
+                        background: none;
+                    }
+
+                    .product-name {
+                        color: @gray__color__1;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 19px;
+                        .text-lines(3);
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .product-price {
+                        font-size: 16px;
+                        line-height: 16px;
+                        font-weight: 700;
+                        color: @primary__color;
+                        margin-top: 6px;
+
+                    }
+                }
+            }
+
+            .livesearch.view-all-footer {
+                background: @primary__alt__color;
+                margin: -10px 15px 0;
+                padding: 2px;
+                height: 33px;
+                border-radius: 5px;
+                color: transparent;
+                position: relative;
+                &::before{
+                    content: 'Ver todos';
+                    position: absolute;
+                    color: @white__color;
+                    font-size: 16px;
+                    top: 8px;
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+//  Style for 'mobile' devices
+//  ---------------------------------------------
+
+@media only screen and (max-width: @screen__m) {
+
+
+
+    .search-autocomplete {
+        .livesearch.popover-container {
+            width: 400px;
+
+            .livesearch.products-container {
+
+                .livesearch.product-result {
+                    img{
+                        max-width: 50px;
+                    }
+                }
+            }
+
+            .livesearch.view-all-footer {}
+        }
+    }
+
+}
