@@ -1,0 +1,33 @@
+<?php
+
+/** @var \Magento\Framework\Escaper $escaper */
+/** @var $block Magento\Framework\View\Element\Template */
+
+?>
+<div class="store-nav-bar">
+    <ul class="col-redirect">
+        <li class="redirect-link">
+            <a href="<?= $block->getUrl('quem-somos') ?>">
+                <?= $escaper->escapeHtml(__('Who we are?')) ?>
+            </a>
+        </li>
+    </ul>
+    <ul class="redirect-all">
+        <li class="store-default">
+            <a href="<?= $block->getUrl('wishlist') ?>"><span class="icon-heart"></span></a>
+            <a class="wishlist-label" href="<?= $block->getUrl('wishlist') ?>">
+                <?= $escaper->escapeHtml(__('Wishlist')) ?>
+            </a>
+        </li>
+        <li class="change-store" id="changeStore" data-bind="scope: 'compareProducts'"
+            data-role="compare-products-link">
+            <a data-bind="attr: {'href': compareProducts().listUrl}"><span class="icon-bar-chart"></span></a>
+            <a class="action compare"
+               data-bind="attr: {'href': compareProducts().listUrl}">
+                <?= $block->escapeHtml(__('Compare Prices')) ?>
+                <span class="counter qty" data-bind="text: compareProducts().countCaption, css: {'no-display': !compareProducts().count}"></span>
+            </a>
+        </li>
+    </ul>
+</div>
+

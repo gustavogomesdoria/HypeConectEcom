@@ -1,0 +1,27 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <referenceContainer name="footer" htmlClass="footer">
+            <block class="Magento\Cms\Block\Block" name="footer_hype_ecom">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_hype_ecom</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <!--move-->
+        <move element="container.store.navbar" destination="header.container" before="-"/>
+        <move element="logo" destination="header-wrapper" before="-"/>
+        <move element="top.search" destination="header-wrapper" after="header.panel"/>
+        <move element="header.panel" destination="header-wrapper" before="top.search"/>
+        <move element="minicart" destination="header-wrapper" after="-"/>
+
+        <!-- remove -->
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="currency" remove="true"/>
+        <referenceBlock name="store.settings.currency" remove="true"/>
+
+    </body>
+</page>
