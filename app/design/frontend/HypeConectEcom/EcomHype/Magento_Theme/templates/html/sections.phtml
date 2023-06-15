@@ -1,0 +1,48 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ *  General template for displaying group of blocks divided into sections
+ */
+
+$group = $block->getGroupName();
+$groupCss = $block->getGroupCss();
+
+$_loggedin = $block->getLayout()->createBlock('Magento\Customer\Block\Account\AuthorizationLink')->isLoggedIn();
+?>
+<?php if ($detailedInfoGroup = $block->getGroupChildNames($group)):?>
+
+    <div class="sections <?= $block->escapeHtmlAttr($groupCss) ?> nav-mobile">
+        <?php if ($_loggedin) : ?>
+            <div class="container-store-navbar store-mobile">
+                <?= $this->getLayout()
+                    ->createBlock("Magento\Framework\View\Element\Template")
+                    ->setTemplate("Magento_Theme::html/store-navbar.phtml")
+                    ->toHtml() ?>
+            </div>
+        <?php endif; ?>
+
+        <?php $layout = $block->getLayout(); ?>
+
+        <div class="section-items <?= $block->escapeHtmlAttr($groupCss) ?>-items <?=($_loggedin)?'user-logged':'user-logged-out'; ?>">
+            <?php foreach ($detailedInfoGroup as $name):?>
+                <?php
+                    $html = $layout->renderElement($name);
+                if (!trim($html) && ($block->getUseForce() != true)) {
+                    continue;
+                }
+                    $alias = $layout->getElementAlias($name);
+                    $label = $block->getChildData($alias, 'title');
+                ?>
+                <div class="section-item-content <?= $block->escapeHtmlAttr($groupCss) ?>-item-content"
+                     id="<?= $block->escapeHtmlAttr($alias) ?>"
+                     data-role="content">
+                    <?= /* @noEscape */ $html ?>
+                </div>
+            <?php endforeach;?>
+        </div>
+    </div>
+<?php endif; ?>

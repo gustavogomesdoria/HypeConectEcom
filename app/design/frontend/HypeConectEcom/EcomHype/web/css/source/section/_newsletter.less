@@ -1,0 +1,119 @@
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+& when (@media-common =true) {
+    .block.newsletter {
+        .title {
+            display: block;
+        }
+    }
+}
+
+//
+//  Desktop 768px (style-l.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__s) {
+    .block.newsletter {
+        background-color: @primary__color__lighter;
+        display: flex;
+        max-width: unset !important;
+        width: 100% !important;
+        margin-bottom: 0;
+        padding: 20px;
+
+        .content {
+            width: 80%;
+            .form.subscribe {
+                position: relative;
+            }
+
+            .actions {
+                position: absolute;
+                right: 335px;
+                top: 4px;
+
+                button {
+                    .btn();
+                    .btn-newsletter();
+                    .btn-small();
+
+                    span {
+                        color: @primary__color;
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .title {
+            width: 17%;
+            display: flex !important;
+            margin-bottom: 0;
+
+            &:before {
+                content: '';
+                background: @icon__envelope;
+                margin-right: 10px;
+                padding: 10px 50px;
+            }
+
+            .wrp-isnc-news {
+                span {
+                    font-size: 16px;
+                    color: @white__color;
+                }
+
+                strong {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: @secondary__color;
+                }
+            }
+        }
+
+        .wrp-msg {
+            width: 11%;
+            span {
+                font-size: 16px;
+                color: @white__color;
+            }
+
+            strong {
+                font-size: 16px;
+                font-weight: 600;
+                color: @secondary__color;
+            }
+        }
+
+        .wrp-news {
+            .wrp-input-news {
+                display: flex;
+                margin-left: 50px;
+
+                input {
+                    min-height: 50px;
+                    border-radius: 4px;
+                    width: 40%;
+                }
+            }
+        }
+
+        .actions {
+            float: unset !important;
+        }
+    }
+}
+
+
+//
+//  Mobile 640px (style-l.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__s) {
+
+}
+
+
+

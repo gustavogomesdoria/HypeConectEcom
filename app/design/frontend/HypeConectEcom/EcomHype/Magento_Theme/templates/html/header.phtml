@@ -1,0 +1,36 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var \Magento\Theme\Block\Html\Header $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+
+$welcomeMessage = $block->getWelcome();
+$_loggedin = $block->getLayout()->createBlock('Magento\Customer\Block\Account\AuthorizationLink')->isLoggedIn();
+?>
+
+<li class="greet welcome" data-bind="scope: 'customer'">
+    <?php if ($_loggedin) : ?>
+        <p class="logged-in"><?= __('Hello') ?> <br><a href="<?= $block->escapeUrl($block->getUrl('customer/account/'));?>" data-bind="text: customer().firstname"></a></p>
+    <?php else: ?>
+        <?= $block->getBlockHtml('header.additional') ?>
+    <?php endif; ?>
+</li>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "customer": {
+                        "component": "Magento_Customer/js/view/customer"
+                    }
+                }
+            }
+        }
+    }
+</script>

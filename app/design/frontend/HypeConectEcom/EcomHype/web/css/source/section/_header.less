@@ -2,7 +2,8 @@
 //  Common (styles-m.css)
 //  _____________________________________________
 & when (@media-common =true) {
-
+    .page-header {
+    }
 }
 
 //
@@ -10,6 +11,26 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__s) {
+    .page-header {
+        .header.content {
+            .panel.header {
+                .header.links {
+                    float: unset;
+                    &:last-child {
+                        a {
+                            color: @secondary__color;
+                        }
+                    }
+
+                    .link.authorization-link {
+                        a {
+                            color: @secondary__color;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -18,7 +39,9 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__s) {
+    .page-header {
 
+    }
 }
 
 

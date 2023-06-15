@@ -1,0 +1,110 @@
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+& when (@media-common =true) {
+    .page-footer {
+        padding-bottom: 0;
+        .wrp-footer {
+            background-color: @primary__color !important;
+            &-row-first,
+            &-row-second {
+                padding: 0 50px;
+                h2 {
+                    color: @secondary__color;
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+
+                p,a,span {
+                    color: @white__color;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+
+                .wrp-lorem p{
+                    font-weight: 500;
+                    width: 73%;
+                }
+            }
+            &-column-four {
+                margin-top: 40px;
+            }
+            &-column-eight {
+                flex-direction: row !important;
+                gap: 15px;
+            }
+
+            &-column-six,
+            &-column-seven {
+                margin-top: -10px;
+
+                .wrp-telefone {
+                    p:before {
+                        content: '';
+                        background: @icon__whatsapp;
+                        margin-right: 10px;
+                        padding: 10px 8px;
+                    }
+                }
+
+                .wrp-endereco {
+                    p:before {
+                        content: '';
+                        background: @icon__map-marker;
+                        margin-right: 10px;
+                        padding: 10px 8px;
+                    }
+                }
+
+                .wrp-email {
+                    p:before {
+                        content: '';
+                        background: @icon__envelope-2;
+                        margin-right: 10px;
+                        padding: 10px 8px;
+                    }
+                }
+            }
+
+            &-row-third {
+                padding: 20px 50px 0;
+
+                p {
+                    font-weight: 600;
+                    font-size: 13px;
+                    color: #8e8e8f;
+                    border-bottom: 1px solid #8f8e8e1c;
+                    width: 50%;
+                }
+            }
+
+            &-row-four {
+                .wrp-razao {
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: #8e8e8f;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Desktop 768px (style-l.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__s) {
+
+}
+
+
+//
+//  Mobile 640px (style-l.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__s) {
+
+}
+
+
+
