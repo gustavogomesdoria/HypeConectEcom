@@ -20,7 +20,7 @@
         max-width: unset !important;
         width: 100% !important;
         margin-bottom: 0;
-        padding: 20px;
+        padding: 24px 54px;
 
         .content {
             width: 80%;
@@ -30,7 +30,7 @@
 
             .actions {
                 position: absolute;
-                right: 335px;
+                right: 207px;
                 top: 4px;
 
                 button {
@@ -48,7 +48,6 @@
         }
 
         .title {
-            width: 17%;
             display: flex !important;
             margin-bottom: 0;
 
@@ -74,7 +73,6 @@
         }
 
         .wrp-msg {
-            width: 11%;
             span {
                 font-size: 16px;
                 color: @white__color;
@@ -96,6 +94,7 @@
                     min-height: 50px;
                     border-radius: 4px;
                     width: 40%;
+                    position: relative;
                 }
             }
         }
@@ -117,3 +116,11 @@
 
 
 
+@media screen and (min-width: 1500px) {
+    .content {
+        .actions {
+            right: 300px !important;
+            top: 4px;
+        }
+    }
+}

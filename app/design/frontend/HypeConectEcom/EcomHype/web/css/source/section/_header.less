@@ -3,6 +3,9 @@
 //  _____________________________________________
 & when (@media-common =true) {
     .page-header {
+        .header.content {
+            background-color: @primary__color;
+        }
     }
 }
 
@@ -13,18 +16,124 @@
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__s) {
     .page-header {
         .header.content {
+            max-width: unset !important;
+            display: flex;
+            position: relative;
+
+            .container-atendimento {
+                    .wrp-header-add {
+                        margin-top: 30px;
+                        max-height: 60px;
+                    }
+
+                .wrp-text-whats {
+                    margin-top: 6px;
+                    p {
+                        margin: 3px 0px -5px 43px !important;
+                        font-size: 15px;
+                        font-weight: 700;
+                    }
+                    &:first-child {
+                        &:before {
+                            content: '';
+                            background: @icon__whatsapp-2;
+                            padding: 26px 65px;
+                            position: absolute;
+                        }
+                    }
+                }
+            }
+
+            .minicart-wrapper {
+                position: absolute;
+                right: 190px;
+                top: 17px;
+
+                .wrp-my-sac {
+                    color: @white__color;
+                    position: relative;
+                    right: -160px;
+                    top: 51px;
+                    font-size: 15px;
+                    font-weight: 700;
+                    strong {
+                        color: @secondary__color;
+                    }
+                }
+                .action.showcart {
+                    &:before {
+                        content: '';
+                        background: @icon__cart;
+                        padding: 35px 55px;
+                        position: absolute;
+                    }
+                }
+            }
+
+            .block.block-search {
+                width: 38% !important;
+                margin-top: 36px;
+                margin-left: 50px;
+
+                input {
+                    min-height: 43px;
+                    border-radius: 5px;
+                }
+            }
+
+            .logo {
+                margin: 0;
+            }
+
             .panel.header {
+                padding: 0;
+                margin: 0;
+
                 .header.links {
                     float: unset;
+                    &:before {
+                        content: '';
+                        background: @icon__user;
+                        padding: 46px 29px;
+                        position: absolute;
+                    }
+
                     &:last-child {
+                        li {
+                            margin: 25px 0 0 15px !important;
+                        }
                         a {
                             color: @secondary__color;
+                            font-weight: 700;
+                            font-size: 15px;
                         }
                     }
 
+                    li:nth-child(3) {
+                        position: absolute;
+                        left: 252px;
+                        top: 66px;
+                    }
+
+
                     .link.authorization-link {
+                        margin: 25px 0 0 35px !important;
+                        &:after {
+                            color: @white__color;
+                            display: block;
+                            font-size: 15px;
+                            font-weight: 700;
+                            margin: 0;
+                        }
+                        span {
+                            color: @white__color;
+                            font-size: 15px;
+                            font-weight: 700;
+                        }
                         a {
                             color: @secondary__color;
+                            font-size: 15px;
+                            font-weight: 700;
                         }
                     }
                 }
