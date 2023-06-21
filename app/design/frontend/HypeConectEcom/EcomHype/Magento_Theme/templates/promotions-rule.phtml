@@ -1,0 +1,80 @@
+<div class="wrp-promotions-rule">
+    <div class="wrp-img-one">
+        <img src="<?php echo $this->getViewFileUrl('images/assets/fa-truck.svg'); ?>" alt="Demo">
+        <strong>
+            <?= $block->escapeHtml(__('free shipping')) ?>
+            <span><?= $block->escapeHtml(__('on purchases over BRL 200.00')) ?></span>
+        </strong>
+    </div>
+    <div class="wrp-img-one">
+        <img src="<?php echo $this->getViewFileUrl('images/assets/fa-barcode.svg'); ?>" alt="Demo">
+        <strong>
+            <?= $block->escapeHtml(__('10% Off')) ?>
+            <span><?= $block->escapeHtml(__('by bank slip or deposit')) ?></span>
+        </strong>
+    </div>
+    <div class="wrp-img-one">
+        <img src="<?php echo $this->getViewFileUrl('images/assets/fa-credit-card.svg'); ?>" alt="Demo">
+        <strong>
+            <?= $block->escapeHtml(__('installment')) ?>
+            <span><?= $block->escapeHtml(__('up to 12 installments without interest on the card')) ?></span>
+        </strong>
+    </div>
+    <div class="wrp-img-one">
+        <img src="<?php echo $this->getViewFileUrl('images/assets/fa-shield.svg'); ?>" alt="Demo">
+        <strong>
+            <?= $block->escapeHtml(__('100% safe')) ?>
+            <span><?= $block->escapeHtml(__('here you can trust')) ?></span>
+        </strong>
+    </div>
+</div>
+
+<script>
+    require(['jquery', 'jquery/ui', 'slick'], function($) {
+        $(document).ready(function() {
+            $('.wrp-promotions-rule').slick({
+                dots: true,
+                arrows: false,
+                infinite: true,
+                loop: true,
+                speed: 300,
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                autoplay: false,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 6.5,
+                        }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            centerMode: true,
+                            slidesToShow: 2.5,
+                            arrows: false,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            arrows: false,
+                        }
+                    },
+                    {
+                        breakpoint: 375,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: false,
+                        }
+                    }
+                ]
+            });
+        });
+    });
+</script>

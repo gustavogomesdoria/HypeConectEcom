@@ -1,0 +1,91 @@
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+& when (@media-common =true) {
+    .wrp-promotions-rule {
+        position: absolute;
+        background-color: @primary__color;
+        z-index: 9999;
+        left: 0;
+        right: 0;
+        max-width: 95%;
+        min-height: 70px;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 5px 5px 5px;
+        align-items: center;
+        padding: 10px;
+        .wrp-img-one {
+            strong {
+                font-weight: 700;
+                color: @secondary__color;
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    font-weight: 600;
+                    color: @white__color;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Desktop 768px (style-l.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__s) {
+        .wrp-promotions-rule {
+            top: 780px;
+
+            .slick-list.draggable,
+            .slick-track {
+                width: 100% !important;
+                display: flex;
+            }
+
+            .slick-slide.slick-active{
+                width: 100% !important;
+                display: flex;
+                justify-content: space-around;
+            }
+            .wrp-img-one {
+                display: flex !important;
+                gap: 10px;
+
+                strong {
+                    font-size: 20px;
+
+                    span {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+}
+
+//
+//  Mobile 640px (style-l.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__s) {
+    .wrp-promotions-rule {
+        top: 545px;
+        .wrp-img-one {
+            padding: 10px;
+            text-align: center;
+
+            img {
+                margin: 0 auto;
+            }
+            strong {
+                font-size: 18px;
+
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

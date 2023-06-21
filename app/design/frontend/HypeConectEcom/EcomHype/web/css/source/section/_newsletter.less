@@ -24,6 +24,7 @@
 
         .content {
             width: 80%;
+
             .form.subscribe {
                 position: relative;
             }
@@ -54,8 +55,7 @@
             &:before {
                 content: '';
                 background: @icon__envelope;
-                margin-right: 10px;
-                padding: 10px 50px;
+                padding: 20px 52px;
             }
 
             .wrp-isnc-news {
@@ -111,9 +111,85 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__s) {
+    .block.newsletter {
+        background-color: @primary__color__lighter;
+        margin-bottom: 0;
+        padding-bottom: 20px;
 
+        .form.subscribe {
+            display: block;
+        }
+
+        .title {
+            display: flex !important;
+            margin-bottom: 0;
+        }
+
+        .wrp-msg {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            span {
+                font-size: 16px;
+                color: @white__color;
+            }
+
+            strong {
+                font-size: 16px;
+                font-weight: 600;
+                color: @secondary__color;
+            }
+        }
+
+        .wrp-isnc-news {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 15px auto 15px;
+            span {
+                font-size: 16px;
+                color: @white__color;
+            }
+
+            strong {
+                font-size: 24px;
+                font-weight: 600;
+                color: @secondary__color;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        .wrp-input-news {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 15px;
+
+            input {
+                border-radius: 4px;
+                background-color: @white__color;
+                width: 80%;
+                padding: 0 !important;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+
+        .actions {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            button {
+                .btn-small();
+                .btn();
+                .btn-newsletter();
+                width: 74%;
+            }
+        }
+    }
 }
-
 
 
 @media screen and (min-width: 1500px) {

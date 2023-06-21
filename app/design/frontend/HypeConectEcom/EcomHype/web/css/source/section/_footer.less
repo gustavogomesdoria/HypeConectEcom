@@ -4,31 +4,36 @@
 & when (@media-common =true) {
     .page-footer {
         padding-bottom: 0;
+
         .wrp-footer {
             background-color: @primary__color !important;
+
             &-row-first,
             &-row-second {
                 padding: 0 50px;
+
                 h2 {
                     color: @secondary__color;
                     font-size: 20px;
                     font-weight: 700;
                 }
 
-                p,a,span {
+                p, a, span {
                     color: @white__color;
                     font-size: 14px;
                     font-weight: 600;
                 }
 
-                .wrp-lorem p{
+                .wrp-lorem p {
                     font-weight: 500;
                     width: 73%;
                 }
             }
+
             &-column-four {
                 margin-top: 40px;
             }
+
             &-column-eight {
                 flex-direction: row !important;
                 gap: 15px;
@@ -103,7 +108,12 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__s) {
-
+    .wrp-footer-row-first,
+    .wrp-footer-row-second,
+    .wrp-footer-row-third,
+    .wrp-footer-row-four {
+        padding: 20px !important;
+    }
 }
 
 
