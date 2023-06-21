@@ -2,7 +2,7 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="header-wrapper">
-            <container name="container.atendimento" htmlTag="div" htmlClass="container-atendimento">
+            <container name="container.atendimento" htmlTag="div" htmlClass="container-atendimento-desk">
                 <block class="Magento\Cms\Block\Block" name="header_service_add">
                     <arguments>
                         <argument name="block_id" xsi:type="string">header_service_add</argument>

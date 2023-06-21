@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b8c6eb3-7963-4871-9a21-7a910c13a97e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/Magento_Checkout/templates/cart/minicart.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/pages/HomePage/_home.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/section/_menu-desktop.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/Magento_Cms/layout/cms_index_index.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/Magento_Theme/templates/promotions-rule.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/components/_slick.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/section/_promotions-rule.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/Magento_Theme/layout/default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/Magento_Theme/layout/default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/Magento_Theme/templates/html/sections.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/Magento_Theme/templates/html/sections.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/Magento_Theme/templates/html/store-navbar.phtml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/i18n/pt_BR.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/i18n/pt_BR.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/_extend.less" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/_extend.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/pages/HomePage/_home.less" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/pages/HomePage/_home.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/section/_footer.less" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/section/_footer.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/section/_header.less" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/section/_header.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/section/_menu-desktop.less" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/section/_menu.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/section/_newsletter.less" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/section/_newsletter.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/system.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/system.log" afterDir="false" />
@@ -628,27 +630,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/gugomes/Development/Bis2Bis/HypeConectEcom/app/design/frontend/HypeConectEcom/EcomHype/Magento_Checkout/templates/cart&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/var/www/html/conab-bombas-2022",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/js" />
+      <recent name="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/components" />
       <recent name="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/Magento_Checkout/templates/cart" />
       <recent name="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/Magento_Newsletter/templates" />
       <recent name="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/css/source/base" />
-      <recent name="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web" />
-      <recent name="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/Magento_Customer/templates/account/link" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/design/frontend/HypeConectEcom/EcomHype/web/images/assets" />
@@ -667,7 +669,8 @@
       <workItem from="1686695947520" duration="2459000" />
       <workItem from="1687030932936" duration="5472000" />
       <workItem from="1687144789034" duration="1107000" />
-      <workItem from="1687178067784" duration="373000" />
+      <workItem from="1687178067784" duration="11388000" />
+      <workItem from="1687304174302" duration="30417000" />
     </task>
     <servers />
   </component>

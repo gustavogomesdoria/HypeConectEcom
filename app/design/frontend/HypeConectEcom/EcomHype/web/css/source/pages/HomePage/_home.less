@@ -5,13 +5,59 @@
     .page-title-wrapper {
         display: none;
     }
+    .pagebuilder-slider {
+        position: relative;
+
+        .slick-arrow {
+            background: none;
+
+            &:before {
+                color: @white__color !important;
+            }
+        }
+    }
 }
 
 //
 //  Desktop 768px (style-l.css)
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__s) {}
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__s) {
+
+    .cms-home.cms-index-index {
+        #maincontent {
+            max-width: unset !important;
+            padding: 0 !important;
+        }
+
+        .home-page-products {
+            margin-top: 50px;
+        }
+
+            .wrp-sllider-homepage {
+                .pagebuilder-overlay {
+                    min-height: 600px !important;
+                }
+            }
+
+
+            .slick-dots {
+                position: absolute;
+                margin-top: -90px;
+                li {
+                    button {
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+                .slick-active {
+                    button {
+                        background-color: @secondary__color;
+                    }
+                }
+            }
+        }
+    }
 
 
 //
